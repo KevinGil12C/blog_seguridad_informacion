@@ -406,6 +406,9 @@ footer img{
         display: none;
     }
     .nav{
+        padding: 18px 0;
+    }
+    .article-page .nav{
         padding: 50px 0;
     }
     section{
@@ -437,7 +440,7 @@ footer img{
         display: none;
     }
     .post-header{
-        height: 200px;
+        height: 150px;
     }
     .header-title{
         width: 100%;
