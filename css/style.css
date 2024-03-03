@@ -406,7 +406,7 @@ footer img{
         display: none;
     }
     .nav{
-        padding: 14px 0;
+        padding: 50px 0;
     }
     section{
         padding: 2rem 0;
@@ -458,7 +458,7 @@ footer img{
         font-size: 0.9rem;
     }
     .home{
-        min-height: 100px;
+        min-height: 215px;
     }
     .post-box{
         padding: 10px;
