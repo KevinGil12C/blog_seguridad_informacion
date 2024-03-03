@@ -1,4 +1,3 @@
-//Filtro JS
 document.addEventListener("DOMContentLoaded", function() {
     var filterItems = document.querySelectorAll('.post-filter-item');
     var postBoxes = document.querySelectorAll('.post-box');
@@ -25,14 +24,15 @@ document.addEventListener("DOMContentLoaded", function() {
             this.classList.add('active-filter');
         });
     });
+
+    // Cambiar header en scroll
+    let header = document.querySelector('header');
+
+    window.addEventListener("scroll", () => {
+        header.classList.toggle("shadow", window.scrollY > 0);
+    });
 });
 
-//Cambiar header en scroll
-let header = document.querySelector('header');
-
-window.addEventListener("scroll", ()=>{
-    header.classList.toggle("shadow", window.scrollY > 0);
-});
 
 window.addEventListener('DOMContentLoaded', (event) => {
     // Código que se ejecuta cuando la página está completamente cargada
