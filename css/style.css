@@ -166,7 +166,7 @@ header.shadow .logo{
 
 .post-img{
     width: 300px;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     object-position: center;
     border-radius: 0.5rem;
@@ -347,6 +347,8 @@ footer img{
 
 .sub-heading{
     font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
 }
 
 .post-text{
@@ -354,6 +356,45 @@ footer img{
     line-height: 1.7rem;
     margin: 1rem 0;
     text-align: justify;
+}
+
+.post-text-sub{
+    font-size: 1rem;
+    line-height: 1.7rem;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.post-text-italic{
+    font-size: 1rem;
+    line-height: 1.7rem;
+    margin: 1rem 0;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.caracteristicas{
+    font-size: 1rem;
+    line-height: 1.7rem;
+    margin: 1rem 0;
+    text-align: justify;
+    font-weight: bold;
+}
+
+.caracteristicas-content{
+    font-weight: normal;
+}
+
+.caracteristicas li:not(.no-star)::before {
+    content: "👍";
+    margin-right: 5px; /* Ajusta el espaciado según sea necesario */
+}
+
+.post-img-content{
+    width: 500px;
+    height: auto;
+    text-align: center;
+    margin: auto; /* Agregado para centrar la imagen */
 }
 
 /*Share*/
