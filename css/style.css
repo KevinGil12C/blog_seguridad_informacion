@@ -422,7 +422,7 @@ footer img{
 @media (max-width: 1060px){
     .container{
         margin: 0 auto;
-        width: 95%;
+        width: 100%;
     }
     .home-text{
         width: 100%;
