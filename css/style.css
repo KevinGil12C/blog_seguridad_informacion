@@ -464,7 +464,7 @@ footer img{
     .home-title{
         font-size: 3rem;
     }
-    .header-img{
+    .header-img, .post-img-content{
         width: 200px;
         height: auto;
     }
@@ -486,7 +486,7 @@ footer img{
     .header-title{
         width: 100%;
     }
-    .header-img{
+    .header-img, .post-img-content{
         height: auto;
     }
 }
@@ -510,7 +510,7 @@ footer img{
     .header-title{
         font-size: 1.4rem;
     }
-    .header-img{
+    .header-img, .post-img-content{
         height: auto;
     }
 }
