@@ -438,7 +438,7 @@ footer img{
     }
     .post-container{
         margin: 0 auto;
-        width: 95%;
+        width: 100%;
     }
 }
 
@@ -511,6 +511,7 @@ footer img{
         font-size: 1.4rem;
     }
     .header-img, .post-img-content{
+        width: 200px;
         height: auto;
     }
 }
