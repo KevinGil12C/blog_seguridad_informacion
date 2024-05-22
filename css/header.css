@@ -71,8 +71,46 @@ header.shadow .logo{
     background: hsl(24, 98%, 58%);
     transition: 0.3s;
 }
-
+.terminal-container {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #0f0f0f;
+    color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .terminal {
+    border: 1px solid #666;
+    border-radius: 5px;
+    background-color: #111;
+    padding: 20px;
+  }
+  
+  .prompt {
+    color: #4af626;
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .command {
+    display: block;
+  }
+  
+  
 /* post headere*/
+.post--item{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.post--item a{
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.post--item-link:hover{
+    color: var(--second-color);
+}
 .post-header{
     width: 100%;
     height: 250px;

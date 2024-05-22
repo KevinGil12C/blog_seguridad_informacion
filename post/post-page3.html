@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esteganografía</title>
+    <link rel="icon" href="../img/cmpcuanti.jpeg" type="image/x-icon">
+    <!-- link css --->
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <!--box icon-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body class="article-page">
+    <!--header-->
+    <header>
+        <!--Nav-->
+        <div class="nav container">
+            <!--logo-->
+            <a href="#" class="logo">Ke<span>vscl</span></a>
+            <!--login btn-->
+            <a href="#" class="login" id="fechaP1"></a>
+        </div>
+    </header>
+
+    <main>
+        <!--Post header-->
+        <section class="post-header">
+            <div class="header-content post-container">
+                <!--Back to home-->
+                <a href="../index.html" class="back-home">Home</a>
+                <h1 class="header-title">Esteganografía</h1>
+                <!--Post img-->
+                <img src="../img/digital-steganography-featured.jpg" alt="" class="header-img">
+            </div>
+        </section>
+
+        <!--Posts-->
+        <section class="post-content post-container">
+            <div>
+                <ul class="post--item">
+                    <li><a class="post--item-link" href="#que-es">¿Qué es la esteganografía?</a></li>
+                    <li><a class="post--item-link" href="#como-funciona">¿Cómo funciona la esteganografía?</a></li>
+                    <li><a class="post--item-link" href="#tipos-de">Tipos de esteganografía</a></li>
+                    <li><a class="post--item-link" href="#comparacion">Comparación entre esteganografía y
+                            criptografía</a></li>
+                    <li><a class="post--item-link" href="#usos">Usos de la esteganografía</a></li>
+                    <li><a class="post--item-link" href="#ataques">Esteganografía para realizar ataques</a></li>
+                    <li><a class="post--item-link" href="#practica">Práctica ocultamiento de información usando
+                            Esteganografía.</a></li>
+                </ul>
+            </div>
+            <h2 id="que-es" class="sub-heading">¿Qué es la esteganografía?</h2>
+            <p class="post-text">
+                La esteganografía consiste en ocultar información dentro de otro mensaje u objeto físico para evitar su
+                detección. Puede utilizarse para encubrir cualquier tipo de contenido digital, como texto, imágenes,
+                videos o audios, que luego se extrae en el destino.
+
+                En ocasiones, el contenido oculto mediante esteganografía se cifra antes de ser incrustado en otro
+                formato de archivo. Si no se cifra, puede procesarse para dificultar su detección.
+            </p>
+            <p class="post-text">
+                Aunque se compara con la criptografía, la esteganografía no implica codificar los datos ni usar una
+                clave para descodificarlos. El término "esteganografía" proviene del griego "steganos" (oculto o
+                cubierto) y "graphein" (escritura). Ha sido practicada durante miles de años para mantener la privacidad
+                de las comunicaciones, como en la antigua Grecia, donde se grababan mensajes en madera y se cubrían con
+                cera, o en Roma, donde se usaban tintas invisibles.
+
+                En ciberseguridad, la esteganografía es crucial, ya que se utiliza para ocultar información durante
+                ataques, como los realizados por grupos de ransomware. Datos, herramientas maliciosas o instrucciones
+                pueden esconderse en archivos de imagen, video, sonido o texto que parecen inofensivos.
+            </p>
+
+            <h2 id="como-funciona" class="sub-heading">¿Cómo funciona la esteganografía?</h2>
+            <p class="post-text">
+                La esteganografía consiste en ocultar información de manera que no se levanten sospechas. Una técnica
+                común es la de "bits menos significativos" (LSB), que incrusta información secreta en los bits menos
+                significativos de un archivo multimedia. Por ejemplo:
+            </p>
+            <ul class="caracteristicas">
+                <li><span class="caracteristicas-content">En una imagen, cada píxel tiene tres bytes de datos para los
+                        colores rojo, verde y azul, y algunos formatos añaden un cuarto byte para la transparencia o
+                        "alfa".</span></li>
+                <li><span class="caracteristicas-content">La esteganografía de LSB modifica el último bit
+                        de cada byte para ocultar un bit de datos. Así, para ocultar un megabyte de datos, se
+                        necesitaría una imagen de ocho megabytes.</span></li>
+                <li><span class="caracteristicas-content">Modificar el último bit del píxel no produce un cambio
+                        perceptible, por lo que la imagen original y la modificada son indistinguibles a simple vista.
+                    </span></li>
+            </ul>
+
+            <p class="post-text">
+                Otra técnica es la sustitución de palabras o letras, donde se oculta el texto distribuyéndolo dentro de
+                otro texto más grande y colocando las palabras a intervalos específicos. Aunque fácil de usar, este
+                método puede hacer que el texto parezca incoherente.
+                <br>
+                Otros métodos incluyen ocultar una partición entera de un disco duro o incrustar datos en la sección de
+                encabezado de archivos y paquetes de red. La eficacia de estos métodos depende de la cantidad de datos
+                que pueden ocultar y lo difícil que sean de detectar.
+            </p>
+
+            <img src="../img/como-funciona.webp" alt="" class="post-container">
+            <br><br><br>
+            <h2 id="tipos-de" class="sub-heading">Tipos de Esteganografía</h2>
+            <p class="post-text">
+                Desde una perspectiva digital, existen cinco tipos principales de esteganografía:
+            </p>
+            <ul class="caracteristicas">
+                <li>1. Esteganografía de Texto: <span class="caracteristicas-content">Consiste en ocultar información en
+                        archivos de texto. Esto incluye cambiar el formato de un texto existente, modificar palabras,
+                        usar gramática sin contexto para generar textos legibles o crear secuencias de caracteres
+                        aleatorias.</span></li>
+                <li>2. Esteganografía de Imagen: <span class="caracteristicas-content">Involucra ocultar información en
+                        archivos de imagen. Las imágenes digitales son populares para este propósito debido a la gran
+                        cantidad de elementos en su representación, lo que permite varias formas de ocultación.</span>
+                </li>
+                <li>3. Esteganografía de Audio: <span class="caracteristicas-content">Consiste en incrustar mensajes
+                        secretos en una señal de audio, modificando la secuencia binaria del archivo de audio. Este
+                        proceso es más complejo en comparación con otros métodos debido a la naturaleza del sonido
+                        digital.</span></li>
+                <li>4. Esteganografía de Video: <span class="caracteristicas-content">Los datos se ocultan en formatos
+                        digitales de video, permitiendo ocultar grandes cantidades de información en un flujo de
+                        imágenes y sonidos. Existen dos métodos principales:
+                    </span>
+                    <br>
+                    Incrustar datos en video sin comprimir y luego comprimirlos.
+                    <br>
+                    Incrustar datos directamente en el flujo de datos comprimidos.
+                </li>
+                <li>5. Esteganografía de Red: <span class="caracteristicas-content">También conocida como esteganografía
+                        de protocolo, se basa en incrustar información en los protocolos de control de red utilizados en
+                        la transmisión de datos, como TCP, UDP e ICMP.</span></li>
+            </ul>
+            <br><br><br><br>
+            <h2 id="comparacion" class="sub-heading">Comparación entre esteganografía y criptografía</h2>
+            <p class="post-text">
+                La esteganografía y la criptografía comparten el mismo objetivo: proteger un mensaje o información de
+                terceros, pero emplean mecanismos diferentes para lograrlo. La criptografía convierte la información en
+                texto cifrado, comprensible solo mediante una clave de descifrado. Esto implica que, si alguien
+                intercepta el mensaje cifrado, notará fácilmente que se ha aplicado un cifrado. En contraste, la
+                esteganografía no altera el formato de la información, sino que oculta la existencia del mensaje.
+            </p>
+
+            <p id="usos" class="sub-heading">Usos de la esteganografía</p>
+            <p class="post-text">
+                En tiempos recientes, la esteganografía se utiliza principalmente en computadoras, donde los datos
+                digitales son las operadoras y las redes los canales de propagación de alta velocidad. Entre sus usos se
+                incluyen:
+            </p>
+            <ul class="caracteristicas">
+                <li>Evitar la censura: <span class="caracteristicas-content">Permite enviar información sin que sea
+                        censurada ni rastreada hasta el remitente.</span></li>
+                <li>Marca de agua digital: <span class="caracteristicas-content">Crea marcas de agua invisibles que no
+                        distorsionan la imagen, permitiendo rastrear su uso no autorizado.</span>
+                </li>
+                <li>Protección de información: <span class="caracteristicas-content">Utilizada por fuerzas de seguridad
+                        y organismos gubernamentales para transmitir información confidencial sin levantar
+                        sospechas.</span></li>
+            </ul>
+
+            <p id="ataques" class="sub-heading">Esteganografía para realizar ataques</p>
+            <p class="post-text">Desde el punto de vista de la ciberseguridad, los atacantes pueden usar la
+                esteganografía para incrustar datos maliciosos en archivos que parecen inofensivos. Dado que la
+                esteganografía requiere esfuerzos y características específicas para funcionar correctamente, su uso
+                suele estar a cargo de atacantes avanzados con objetivos definidos. Algunas maneras en que se pueden
+                realizar ataques mediante esteganografía incluyen:</p>
+            <ul class="caracteristicas">
+                <li>Ocultamiento de cargas útiles maliciosas en archivos multimedia digitales: <span
+                        class="caracteristicas-content">Las imágenes digitales son objetivos principales debido a la
+                        gran cantidad de datos redundantes que pueden manipularse sin alterar perceptiblemente su
+                        apariencia. Dado su uso generalizado, los archivos de imágenes rara vez levantan sospechas de
+                        actividad maliciosa. Los videos, documentos, archivos de audio e incluso las firmas de correo
+                        electrónico también ofrecen medios alternativos para aplicar esteganografía y infiltrar cargas
+                        maliciosas.</span></li>
+                <li>Ransomware y exfiltración de datos: <span class="caracteristicas-content">Los grupos de ransomware
+                        han descubierto que la esteganografía les permite ejecutar sus ataques de manera más efectiva.
+                        También puede utilizarse en la exfiltración de datos durante un ciberataque, ocultando
+                        información confidencial en comunicaciones legítimas y permitiendo la extracción de datos sin
+                        ser detectados. Con la exfiltración de datos convirtiéndose en un objetivo principal de los
+                        ciberataques, los especialistas en seguridad están mejorando las medidas para detectar la
+                        extracción de datos, a menudo mediante la supervisión del tráfico de red cifrado.</span>
+                </li>
+                <li>Ocultamiento de comandos en páginas web: <span class="caracteristicas-content">Los atacantes pueden
+                        ocultar comandos para sus implantes en páginas web mediante el uso de espacios en blanco y
+                        registros de depuración publicados en foros. Pueden cargar datos robados de forma encubierta en
+                        imágenes y mantener la persistencia almacenando el código cifrado en ubicaciones específicas.
+                    </span>
+                </li>
+                <li>Publicidad maliciosa: <span class="caracteristicas-content">Los atacantes pueden aprovechar la
+                        esteganografía en campañas de publicidad maliciosa, incrustando código malicioso en anuncios de
+                        banner en línea. Al cargarse, estos anuncios extraen el código malicioso y redirigen a los
+                        usuarios a una página de inicio de kits de exploits.
+                    </span>
+                </li>
+            </ul>
+            <img src="../img/esteganografia.jpg" alt="" class="post-img">
+            <br><br>
+            <p id="practica" class="sub-heading">Práctica ocultamiento de información usando Esteganografía.</p>
+            <p class="post-text">
+                Para esta práctica se hara uso de la herrmienta Stego
+            </p>
+            <p class="post-text">
+                Paso 1: Se actualizan los repositorios de paquetes del sistema operativo Ubuntu para asegurar que se
+                estén utilizando las versiones más recientes de los programas disponibles.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">sudo apt update</div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/update.png" alt="" class="post-img">
+            <p class="post-text">
+                Paso 2: Instalación de Python 3
+                <br>
+                Se instala la versión 3 de Python en el sistema. Python es un lenguaje de programación ampliamente
+                utilizado y es necesario para ejecutar scripts y programas Python.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">sudo apt install python3</div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/install-python3.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 3: Instalación de pip para Python 3
+                <br>
+                Pip es el sistema de gestión de paquetes de Python y se utiliza para instalar y gestionar bibliotecas y
+                paquetes adicionales de Python. Aquí se instala pip específicamente para Python 3.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">sudo apt install python3-pip</div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/install-python3-pip.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 4: Clonar el repositorio de Steganography desde GitHub
+                <br>
+                Se clona el repositorio de Steganography desde GitHub utilizando el comando git clone. Esto descarga el
+                código fuente del proyecto a la máquina local.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">git clone https://github.com/ragibson/Steganography.git</div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/git-clone.png" alt="" class="post-img">
+
+            <p class="post-text logo">
+                Paso 5: Instalación del paquete Python desde el directorio clonado
+                <br>
+                Se navega al directorio del repositorio clonado y se ejecuta el script setup.py para instalar el paquete
+                Python en el sistema. Esto hará que los comandos asociados con Steganography estén disponibles para su
+                uso en el sistema.
+                <br>
+                <span>En caso de error, seguir los siguientes pasos, caso contrario, prosiga con el paso 7:</span>
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">cd Steganography <br>
+                        python3 setup.py install
+                    </div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/setup-error.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 6: Crear y activar un entorno virtual
+                <br>
+                Se crea un entorno virtual de Python utilizando el módulo venv. Un entorno virtual es un ambiente
+                aislado donde se pueden instalar paquetes y dependencias de Python sin interferir con otros proyectos.
+                Luego se activa este entorno virtual.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">python3 -m venv practica <br>
+                        source practica/bin/activate <br>
+                        cd Steganography <br>
+                        python setup.py install</div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/venv-practica.png" alt="" class="post-img">
+            <img src="../practica/setup-install.png" alt="" class="post-img">
+            <p class="post-text">
+                Paso 7: Navegar al directorio de Steganography
+                <br>
+                Se cambia el directorio de trabajo al directorio que contiene las herramientas de esteganografía.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">cd Steganography/stego_lsb/</div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/ls.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 8: Mostrar ayuda para el comando wavsteg
+                <br>
+                Se muestra la información de ayuda para el comando wavsteg, que se utiliza para ocultar y recuperar
+                datos en archivos de audio WAV.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">stegolsb wavsteg --help</div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/help.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 9: Crear un archivo de texto de prueba
+                Se crea un archivo de texto llamado prueba.txt utilizando el comando cat y se escribe el texto "hola
+                mundo desde ubuntu" en él.
+                <br>
+                Se utiliza el comando ls para mostrar todos los archivos en el directorio actual.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">cat > prueba.txt <br>
+                        hola mundo desde ubuntu</div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/cat-prubea.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 10: Ocultar texto en un archivo de audio WAV
+                <br>
+                Se utiliza el comando stegolsb wavsteg para ocultar el texto del archivo prueba.txt dentro de un archivo
+                de audio WAV llamado Kingdom.wav. El archivo de audio resultante se guarda como sound.wav
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">stegolsb wavsteg -h -i Kingdom.wav -s
+                        /home/kevscl/Escritorio/practica/Steganography/stego_lsb/prueba.txt -o
+                        /home/kevscl/Escritorio/practica/Steganography/stego_lsb/sound.wav</div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/crear-sound.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 11: Recuperar texto oculto de un archivo de audio WAV
+                <br>
+                Se utiliza el comando stegolsb wavsteg con la opción -r para recuperar el texto oculto del archivo de
+                audio WAV sound.wav y se guarda en un archivo de texto llamado sample.txt.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">stegolsb wavsteg -r -i
+                        /home/kevscl/Escritorio/practica/Steganography/stego_lsb/sound.wav -o
+                        /home/kevscl/Escritorio/practica/Steganography/stego_lsb/sample.txt -n 2 -b 25
+                    </div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/crear-sample-txt.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 12: Mostrar el contenido del archivo de texto recuperado
+                <br>
+                Se utiliza el comando cat para mostrar el contenido del archivo de texto sample.txt que contiene el
+                texto recuperado del archivo de audio.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">cat sample.txt </div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/cat-sample.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 13: Mostrar ayuda para el comando steglsb
+                <br>
+                Se muestra la información de ayuda para el comando steglsb, que se utiliza para ocultar y recuperar
+                datos en imágenes PNG.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">stegolsb steglsb --help
+                    </div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/help-2.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 14: Comprimir un archivo de texto en formato RAR
+                <br>
+                Se utiliza el comando rar a para comprimir el archivo de texto prueba.txt en un archivo RAR llamado
+                prueba.rar.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">rar a prueba.rar prueba.txt
+                    </div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/crear-rar.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 15: Ocultar el archivo RAR en una imagen PNG
+                <br>
+                Se utiliza el comando stegolsb steglsb para ocultar el archivo RAR prueba.rar dentro de una imagen PNG
+                llamada anime.png. El resultado se guarda como output.png.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">stegolsb steglsb -h -i
+                        /home/kevscl/Escritorio/practica/Steganography/stego_lsb/anime.png -s prueba.rar -n 2 -o
+                        /home/kevscl/Escritorio/practica/Steganography/stego_lsb/output.png
+                    </div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/crear-output.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 16: Comparar las propiedades de las imágenes anime.png y output.png
+            </p>
+            <img src="../practica/comparar-img.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 17: Recuperar el archivo RAR oculto de la imagen PNG
+                <br>
+                Se utiliza el comando stegolsb steglsb con la opción -r para recuperar el archivo RAR oculto del archivo
+                PNG output.png y se guarda como un archivo ZIP llamado output.zip.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">stegolsb steglsb -r -i
+                        /home/kevscl/Escritorio/practica/Steganography/stego_lsb/output.png -o
+                        /home/kevscl/Escritorio/practica/Steganography/stego_lsb/output.zip -n 2
+                    </div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/crear-zip.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 18: Mostrar archivos ZIP generados
+                <br>
+                Se utiliza el comando ls con el patrón *.zip para mostrar todos los archivos ZIP en el directorio
+                actual.
+            </p>
+            <div class="terminal-container">
+                <div class="terminal">
+                    <div class="prompt">kevscl@kevscl-Inspiron-3505:~$</div>
+                    <div class="command">ls *.zip
+                    </div>
+                </div>
+            </div>
+            <br>
+            <img src="../practica/ls-zip.png" alt="" class="post-img">
+
+            <p class="post-text">
+                Paso 19: Descomprimir el archivo ZIP generado y abrir el archivo de texto
+            </p>
+            <img src="../practica/descomprimir.png" alt="" class="post-img">
+
+            <p class="sub-heading">Referencias</p>
+            <ul class="caracteristicas">
+                <li class="caracteristicas-content no-star">12. Entornos virtuales y paquetes. (s. f.). Python
+                    Documentation. <a
+                        href="https://docs.python.org/es/3/tutorial/venv.html " target="_blank">https://docs.python.org/es/3/tutorial/venv.html
+                    </a>
+                </li>
+                <li class="caracteristicas-content no-star">G, A. E. (2019, 8 junio). 7 herramientas de esteganografía
+                    para
+                    enviar mensajes secretos usado por gobierno. Noticias de Seguridad Informática, Ciberseguridad y
+                    Hacking. <a
+                        href="https://noticiasseguridad.com/tutoriales/como-usar-esteganografia-para-enviar-mensajes-secretos/" target="_blank">https://noticiasseguridad.com/tutoriales/como-usar-esteganografia-para-enviar-mensajes-secretos/
+                    </a>
+                </li>
+                <li class="caracteristicas-content no-star">¿Qué es la
+                    esteganografía? Definición y explicación. (2023, 19 abril). latam.kaspersky.com.<a
+                        href="https://latam.kaspersky.com/resource-center/definitions/what-is-steganography" target="_blank">https://latam.kaspersky.com/resource-center/definitions/what-is-steganography</a>
+                </li>
+            </ul>
+
+        </section>
+        <!--Share-->
+        <section class="share post-container">
+            <span class="share-title">Compartir artículo</span>
+            <div class="social">
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://kevingil12c.github.io/blog_seguridad_informacion/post/post-page1.html&title=Título+del+blog"
+                    target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a
+                    href="mailto:?subject=Certificados Electrónicos y Firma Electrónica Avanzada&body=¡Echa un vistazo a este increíble blog: https://kevingil12c.github.io/blog_seguridad_informacion/post/post-page1.html"><i
+                        class='bx bxl-gmail'></i></a>
+                <div class="fb-share-button"
+                    data-href="https://kevingil12c.github.io/blog_seguridad_informacion/post/post-page1.html"
+                    data-layout="button_count"></div>
+            </div>
+
+            <!-- Scripts de Facebook SDK para incrustar el botón de compartir -->
+            <script async defer crossorigin="anonymous"
+                src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v10.0" nonce="Xgk6jI6G"></script>
+        </section>
+    </main>
+
+    <footer>
+        <p class="copyright">&copy; Copyright Kevscl - 2024</p>
+        <div class="social">
+            <a href="https://github.com/KevinGil12C"><i class='bx bxl-github'></i></a>
+            <a href="https://www.linkedin.com/in/kevin-jesus-coyote-gil-030287288/"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-gmail'></i></a>
+            <a href="#"><i class='bx bxl-meta'></i></a>
+        </div>
+    </footer>
+
+    <!--link js-->
+    <script src="../js/app.js"></script>
+    <!-- Incluye el script externo -->
+    <script src="../js/fecha.js"></script>
+
+    <!-- Llama a la función después de que la página se haya cargado completamente -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var fecha = document.getElementById("fechaP1");
+            establecerFechaActual(fecha);
+        });
+    </script>
+</body>
+
+</html>
