@@ -85,15 +85,21 @@ header.shadow .logo{
     padding: 20px;
   }
   
+  .command {
+    display: block;
+    overflow: hidden; /* Opcional: oculta el texto que se desborda */
+    /* text-overflow: ellipsis; */ /* Opcional: agrega puntos suspensivos (...) cuando el texto se desborda */
+    word-wrap: break-word; /* Permite que el texto se ajuste a la siguiente línea */
+  }
+  
+  
   .prompt {
     color: #4af626;
     display: inline-block;
     margin-right: 10px;
   }
   
-  .command {
-    display: block;
-  }
+
   
   
 /* post headere*/
